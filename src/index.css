@@ -3,97 +3,99 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Banking-themed design system */
+/* Black & White Banking Design System */
 
 @layer base {
   :root {
-    --background: 248 250 252;
-    --foreground: 15 23 42;
+    --background: 255 255 255;
+    --foreground: 0 0 0;
 
     --card: 255 255 255;
-    --card-foreground: 15 23 42;
+    --card-foreground: 0 0 0;
 
     --popover: 255 255 255;
-    --popover-foreground: 15 23 42;
+    --popover-foreground: 0 0 0;
 
-    --primary: 59 130 246;
-    --primary-foreground: 248 250 252;
+    --primary: 0 0 0;
+    --primary-foreground: 255 255 255;
 
-    --secondary: 241 245 249;
-    --secondary-foreground: 15 23 42;
+    --secondary: 245 245 245;
+    --secondary-foreground: 0 0 0;
 
-    --muted: 241 245 249;
-    --muted-foreground: 100 116 139;
+    --muted: 245 245 245;
+    --muted-foreground: 115 115 115;
 
-    --accent: 59 130 246;
-    --accent-foreground: 248 250 252;
+    --accent: 0 0 0;
+    --accent-foreground: 255 255 255;
 
     --destructive: 239 68 68;
-    --destructive-foreground: 248 250 252;
+    --destructive-foreground: 255 255 255;
 
-    --border: 226 232 240;
-    --input: 226 232 240;
-    --ring: 59 130 246;
+    --border: 229 229 229;
+    --input: 229 229 229;
+    --ring: 0 0 0;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 255 255 255;
-    --sidebar-foreground: 15 23 42;
-    --sidebar-primary: 59 130 246;
-    --sidebar-primary-foreground: 248 250 252;
-    --sidebar-accent: 241 245 249;
-    --sidebar-accent-foreground: 15 23 42;
-    --sidebar-border: 226 232 240;
-    --sidebar-ring: 59 130 246;
+    --sidebar-background: 0 0 0;
+    --sidebar-foreground: 255 255 255;
+    --sidebar-primary: 255 255 255;
+    --sidebar-primary-foreground: 0 0 0;
+    --sidebar-accent: 38 38 38;
+    --sidebar-accent-foreground: 255 255 255;
+    --sidebar-border: 38 38 38;
+    --sidebar-ring: 255 255 255;
 
-    /* Banking gradients */
-    --banking-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --card-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --gold-gradient: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    /* Card brand gradients */
+    --visa-gradient: linear-gradient(135deg, #1a1f71 0%, #0f4c75 100%);
+    --mastercard-gradient: linear-gradient(135deg, #eb001b 0%, #f79e1b 100%);
+    --amex-gradient: linear-gradient(135deg, #006fcf 0%, #00a86b 100%);
+    --discover-gradient: linear-gradient(135deg, #ff6000 0%, #ff8500 100%);
   }
 
   .dark {
-    --background: 2 6 23;
-    --foreground: 248 250 252;
+    --background: 0 0 0;
+    --foreground: 255 255 255;
 
-    --card: 15 23 42;
-    --card-foreground: 248 250 252;
+    --card: 23 23 23;
+    --card-foreground: 255 255 255;
 
-    --popover: 15 23 42;
-    --popover-foreground: 248 250 252;
+    --popover: 23 23 23;
+    --popover-foreground: 255 255 255;
 
-    --primary: 59 130 246;
-    --primary-foreground: 15 23 42;
+    --primary: 255 255 255;
+    --primary-foreground: 0 0 0;
 
-    --secondary: 30 41 59;
-    --secondary-foreground: 248 250 252;
+    --secondary: 38 38 38;
+    --secondary-foreground: 255 255 255;
 
-    --muted: 30 41 59;
-    --muted-foreground: 148 163 184;
+    --muted: 38 38 38;
+    --muted-foreground: 163 163 163;
 
-    --accent: 30 41 59;
-    --accent-foreground: 248 250 252;
+    --accent: 255 255 255;
+    --accent-foreground: 0 0 0;
 
     --destructive: 239 68 68;
-    --destructive-foreground: 248 250 252;
+    --destructive-foreground: 255 255 255;
 
-    --border: 30 41 59;
-    --input: 30 41 59;
-    --ring: 59 130 246;
+    --border: 38 38 38;
+    --input: 38 38 38;
+    --ring: 255 255 255;
 
-    --sidebar-background: 15 23 42;
-    --sidebar-foreground: 248 250 252;
-    --sidebar-primary: 59 130 246;
-    --sidebar-primary-foreground: 248 250 252;
-    --sidebar-accent: 30 41 59;
-    --sidebar-accent-foreground: 248 250 252;
-    --sidebar-border: 30 41 59;
-    --sidebar-ring: 59 130 246;
+    --sidebar-background: 23 23 23;
+    --sidebar-foreground: 255 255 255;
+    --sidebar-primary: 255 255 255;
+    --sidebar-primary-foreground: 0 0 0;
+    --sidebar-accent: 38 38 38;
+    --sidebar-accent-foreground: 255 255 255;
+    --sidebar-border: 38 38 38;
+    --sidebar-ring: 255 255 255;
 
-    /* Dark mode banking gradients */
-    --banking-gradient: linear-gradient(135deg, #4c1d95 0%, #1e1b4b 100%);
-    --card-gradient: linear-gradient(135deg, #7c3aed 0%, #3730a3 100%);
-    --gold-gradient: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    /* Dark mode card gradients remain colorful */
+    --visa-gradient: linear-gradient(135deg, #1a1f71 0%, #0f4c75 100%);
+    --mastercard-gradient: linear-gradient(135deg, #eb001b 0%, #f79e1b 100%);
+    --amex-gradient: linear-gradient(135deg, #006fcf 0%, #00a86b 100%);
+    --discover-gradient: linear-gradient(135deg, #ff6000 0%, #ff8500 100%);
   }
 }
 
@@ -108,15 +110,19 @@
 }
 
 @layer utilities {
-  .banking-gradient {
-    background: var(--banking-gradient);
+  .visa-gradient {
+    background: var(--visa-gradient);
   }
   
-  .card-gradient {
-    background: var(--card-gradient);
+  .mastercard-gradient {
+    background: var(--mastercard-gradient);
   }
   
-  .gold-gradient {
-    background: var(--gold-gradient);
+  .amex-gradient {
+    background: var(--amex-gradient);
+  }
+
+  .discover-gradient {
+    background: var(--discover-gradient);
   }
 }

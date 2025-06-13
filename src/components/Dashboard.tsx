@@ -24,7 +24,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onLogout, isDarkMode, toggleDarkM
       status: 'Active',
       lastTransaction: '2024-01-15',
       issueDate: '2022-03-10',
-      gradient: 'card-gradient'
+      gradient: 'visa-gradient'
     },
     {
       cardNumber: '5432109876543210',
@@ -36,7 +36,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onLogout, isDarkMode, toggleDarkM
       status: 'Active',
       lastTransaction: '2024-01-14',
       issueDate: '2021-08-15',
-      gradient: 'gold-gradient'
+      gradient: 'mastercard-gradient'
     },
     {
       cardNumber: '3782822463100005',
@@ -48,7 +48,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onLogout, isDarkMode, toggleDarkM
       status: 'Active',
       lastTransaction: '2024-01-13',
       issueDate: '2023-01-20',
-      gradient: 'banking-gradient'
+      gradient: 'amex-gradient'
     },
     {
       cardNumber: '6011111111111117',
@@ -60,7 +60,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onLogout, isDarkMode, toggleDarkM
       status: 'Blocked',
       lastTransaction: '2023-12-28',
       issueDate: '2020-11-05',
-      gradient: 'card-gradient'
+      gradient: 'discover-gradient'
     }
   ];
 

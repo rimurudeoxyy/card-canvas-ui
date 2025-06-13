@@ -19,15 +19,15 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center banking-gradient relative overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
       {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-200 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-200 rounded-full blur-3xl animate-pulse delay-500"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gray-300 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gray-400 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
 
-      <Card className="w-full max-w-md mx-4 backdrop-blur-sm bg-card/95 shadow-2xl border-0 animate-fade-in">
+      <Card className="w-full max-w-md mx-4 backdrop-blur-sm bg-card/95 shadow-2xl border border-border/50 animate-fade-in">
         <CardHeader className="text-center space-y-4">
           <div className="mx-auto w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
             <svg className="w-8 h-8 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -49,7 +49,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
+                className="transition-all duration-200 focus:ring-2 focus:ring-ring/20"
                 required
               />
             </div>
@@ -61,7 +61,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
                 placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
+                className="transition-all duration-200 focus:ring-2 focus:ring-ring/20"
                 required
               />
             </div>

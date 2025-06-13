@@ -15,6 +15,43 @@ interface CreditCardProps {
   gradient: string;
 }
 
+// Card brand logo components
+const VisaLogo = () => (
+  <svg width="48" height="16" viewBox="0 0 48 16" fill="none" className="text-white">
+    <path d="M18.5 2.5h3.2l-2 11h-3.2l2-11zm8.8 7.1c0-.8.7-1.2 2.1-1.4l1.7-.2c.7-.1 1.1-.3 1.1-.7 0-.6-.7-.9-1.8-.9-1 0-1.8.2-2.4.5l-.4-2.3c.7-.3 1.8-.6 3.1-.6 2.9 0 4.7 1.5 4.7 3.8v7.3h-2.7l-.2-1h-.1c-.6.8-1.6 1.2-2.8 1.2-1.8 0-3.3-1.1-3.3-3.1 0-2.6 2.3-3.6 5-3.6zm2.9 1.7c-1.4 0-2.3.5-2.3 1.3 0 .6.4 1 1.2 1 .9 0 1.5-.6 1.5-1.4v-.9h-.4zm7.8-6.8c.6 0 1.1.4 1.1 1s-.5 1-1.1 1-1.1-.4-1.1-1 .5-1 1.1-1zm-1.6 2.5h3.2l-2 11h-3.2l2-11zm8.1 0l-.3 1.8h.1c.7-1.4 1.8-2 3.2-2 .3 0 .6 0 .8.1l-.6 3c-.3-.1-.7-.1-1-.1-1.2 0-2.1.9-2.3 2.2l-1.1 6h-3.2l2-11h2.4z" fill="currentColor"/>
+  </svg>
+);
+
+const MastercardLogo = () => (
+  <div className="flex items-center">
+    <div className="w-6 h-6 bg-red-500 rounded-full opacity-90"></div>
+    <div className="w-6 h-6 bg-yellow-500 rounded-full -ml-3 opacity-90"></div>
+  </div>
+);
+
+const AmexLogo = () => (
+  <svg width="32" height="16" viewBox="0 0 32 16" fill="none" className="text-white">
+    <rect width="32" height="16" rx="2" fill="currentColor" fillOpacity="0.2"/>
+    <text x="16" y="11" textAnchor="middle" className="text-xs font-bold fill-current">AMEX</text>
+  </svg>
+);
+
+const DiscoverLogo = () => (
+  <svg width="48" height="16" viewBox="0 0 48 16" fill="none" className="text-white">
+    <rect width="48" height="16" rx="2" fill="currentColor" fillOpacity="0.2"/>
+    <text x="24" y="11" textAnchor="middle" className="text-xs font-bold fill-current">DISCOVER</text>
+  </svg>
+);
+
+const getCardLogo = (cardType: string) => {
+  const type = cardType.toLowerCase();
+  if (type.includes('visa')) return <VisaLogo />;
+  if (type.includes('mastercard')) return <MastercardLogo />;
+  if (type.includes('american express') || type.includes('amex')) return <AmexLogo />;
+  if (type.includes('discover')) return <DiscoverLogo />;
+  return null;
+};
+
 const CreditCard: React.FC<CreditCardProps> = ({
   cardNumber,
   cardHolder,
@@ -43,8 +80,8 @@ const CreditCard: React.FC<CreditCardProps> = ({
               <p className="text-sm opacity-90">{cardType}</p>
               <p className="text-xs opacity-75">****{cardNumber.slice(-4)}</p>
             </div>
-            <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-              <div className="w-4 h-4 bg-white/60 rounded-full"></div>
+            <div className="flex items-center">
+              {getCardLogo(cardType)}
             </div>
           </div>
           
