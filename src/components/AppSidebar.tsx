@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   Sidebar,
@@ -11,8 +10,8 @@ import {
   SidebarMenuItem,
 } from '@/components/ui/sidebar';
 import { 
-  Home, Users, FileText, Calendar, Cards, 
-  Link, Settings, MapPin, CreditCard, Building,
+  Home, Users, FileText, Calendar, CreditCard, 
+  Link, Settings, MapPin, Building,
   Shield, Key, Search, TrendingUp, Printer,
   Lock, User, Target, Server, Zap
 } from 'lucide-react';
@@ -20,7 +19,7 @@ import {
 const menuItems = [
   { title: 'Home', icon: Home, url: '#' },
   { title: 'Issuer', icon: Building, url: '#' },
-  { title: 'Card Program', icon: Cards, url: '#' },
+  { title: 'Card Program', icon: CreditCard, url: '#' },
   { title: 'Card Batches', icon: FileText, url: '#' },
   { title: 'Schedule Jobs', icon: Calendar, url: '#' },
   { title: 'Cards', icon: CreditCard, url: '#' },
